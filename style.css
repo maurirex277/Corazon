@@ -6,15 +6,20 @@ body {
   height: 100vh;
   background-color: #fae1dd;
   margin: 0;
+  flex-direction: column; /* Asegura que los elementos estén apilados verticalmente */
 }
 
 .container {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Asegura que la carta y el sobre estén en una columna */
 }
 
 .valentines {
   position: relative;
-  top: 50px;
+  top: 70px;
   cursor: pointer;
   animation: up 3s linear infinite;
 }
@@ -33,6 +38,7 @@ body {
   width: 300px;
   height: 200px;
   background-color: #f08080;
+  top: 50xp;
 }
 
 .envelope:before {
@@ -314,4 +320,30 @@ body {
   .shadow {
     width: 220px;
   }
+}
+
+/* Botón de reproducir/pausar */
+.play-button-container {
+  text-align: center;
+  margin-top: 100px; /* Mueve el botón debajo de la carta */
+  width: 100%;
+}
+
+#playButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #f4978e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#playButton:hover {
+  background-color: #f08080;
+}
+
+#playButton:active {
+  transform: scale(0.98);
 }
